@@ -5,7 +5,7 @@ import SwiftUI
 /// Central state management for the application
 @MainActor
 class AppState: ObservableObject {
-    @Published var selectedTab: SidebarTab = .terminal
+    @Published var selectedTab: AppTab = .terminal
     @Published var currentSession: TaskSession?
     @Published var sessions: [TaskSession] = []
     @Published var commandHistory: [CommandHistoryEntry] = []
@@ -17,12 +17,13 @@ class AppState: ObservableObject {
     
     @Published var preferences = UserPreferences()
     
-    enum SidebarTab: String, CaseIterable, Identifiable {
+    enum AppTab: String, CaseIterable, Identifiable {
         case terminal = "Terminal"
-        case taskChunker = "Task Chunker"
-        case quickActions = "Quick Actions"
-        case timer = "Timer & Breaks"
-        case breathing = "Breathing"
+        case taskChunker = "Tasks"
+        case quickActions = "Actions"
+        case soundMixer = "Sounds"
+        case timer = "Timer"
+        case breathing = "Breathe"
         case settings = "Settings"
         
         var id: String { rawValue }
@@ -32,6 +33,7 @@ class AppState: ObservableObject {
             case .terminal: return "terminal"
             case .taskChunker: return "list.bullet.rectangle"
             case .quickActions: return "bolt.fill"
+            case .soundMixer: return "waveform"
             case .timer: return "timer"
             case .breathing: return "wind"
             case .settings: return "gearshape"
@@ -43,6 +45,7 @@ class AppState: ObservableObject {
             case .terminal: return .green
             case .taskChunker: return .blue
             case .quickActions: return .orange
+            case .soundMixer: return .teal
             case .timer: return .purple
             case .breathing: return .cyan
             case .settings: return .gray

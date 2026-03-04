@@ -18,7 +18,6 @@
 		AA000009 /* CommandSuggestionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000018; };
 		AA00000A /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000019; };
 		AA00000B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA00001A; };
-		AA00000C /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001B; };
 		AA00000D /* HyperfocusGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001C; };
 		AA00000E /* GentleReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001D; };
 		AA00000F /* BreathingExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001E; };
@@ -27,6 +26,14 @@
 		AA000024 /* ContextMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000025; };
 		AA000026 /* OutputParserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000027; };
 		AA000028 /* LolcatRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000029; };
+		BB000030 /* SoundElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000040; };
+		BB000031 /* NoiseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000041; };
+		BB000032 /* AudioMixEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000042; };
+		BB000033 /* MixPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000043; };
+		BB000034 /* PresetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000044; };
+		BB000035 /* SoundMixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000045; };
+		BB000036 /* ElementCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000046; };
+		BB000037 /* ScreenshotPreviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000047; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +49,6 @@
 		AA000018 /* CommandSuggestionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandSuggestionEngine.swift; sourceTree = "<group>"; };
 		AA000019 /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
 		AA00001A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AA00001B /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		AA00001C /* HyperfocusGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperfocusGuard.swift; sourceTree = "<group>"; };
 		AA00001D /* GentleReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GentleReminderView.swift; sourceTree = "<group>"; };
 		AA00001E /* BreathingExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingExerciseView.swift; sourceTree = "<group>"; };
@@ -52,7 +58,15 @@
 		AA000027 /* OutputParserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputParserService.swift; sourceTree = "<group>"; };
 		AA000029 /* LolcatRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolcatRenderer.swift; sourceTree = "<group>"; };
 		AA00001F /* NeuroShell.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NeuroShell.entitlements; sourceTree = "<group>"; };
-		AA000030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA000099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB000040 /* SoundElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundElement.swift; sourceTree = "<group>"; };
+		BB000041 /* NoiseGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseGenerator.swift; sourceTree = "<group>"; };
+		BB000042 /* AudioMixEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMixEngine.swift; sourceTree = "<group>"; };
+		BB000043 /* MixPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixPreset.swift; sourceTree = "<group>"; };
+		BB000044 /* PresetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetStore.swift; sourceTree = "<group>"; };
+		BB000045 /* SoundMixerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundMixerView.swift; sourceTree = "<group>"; };
+		BB000046 /* ElementCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCard.swift; sourceTree = "<group>"; };
+		BB000047 /* ScreenshotPreviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotPreviews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +97,10 @@
 				AA000303 /* Views */,
 				AA000304 /* Models */,
 				AA000305 /* Services */,
+				BB000306 /* Audio */,
 				AA00001A /* Assets.xcassets */,
 				AA00001F /* NeuroShell.entitlements */,
-				AA000030 /* Info.plist */,
+				AA000099 /* Info.plist */,
 			);
 			path = NeuroShell;
 			sourceTree = "<group>";
@@ -105,12 +120,26 @@
 				AA000013 /* TaskChunkerView.swift */,
 				AA000014 /* TimerView.swift */,
 				AA000015 /* SettingsView.swift */,
-				AA00001B /* SidebarView.swift */,
 				AA00001D /* GentleReminderView.swift */,
 				AA00001E /* BreathingExerciseView.swift */,
 				AA000023 /* QuickActionsView.swift */,
+				BB000045 /* SoundMixerView.swift */,
+				BB000046 /* ElementCard.swift */,
+				BB000047 /* ScreenshotPreviews.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BB000306 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				BB000040 /* SoundElement.swift */,
+				BB000041 /* NoiseGenerator.swift */,
+				BB000042 /* AudioMixEngine.swift */,
+				BB000043 /* MixPreset.swift */,
+				BB000044 /* PresetStore.swift */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		AA000304 /* Models */ = {
@@ -214,7 +243,6 @@
 				AA000008 /* TerminalService.swift in Sources */,
 				AA000009 /* CommandSuggestionEngine.swift in Sources */,
 				AA00000A /* TimerService.swift in Sources */,
-				AA00000C /* SidebarView.swift in Sources */,
 				AA00000D /* HyperfocusGuard.swift in Sources */,
 				AA00000E /* GentleReminderView.swift in Sources */,
 				AA00000F /* BreathingExerciseView.swift in Sources */,
@@ -223,6 +251,14 @@
 				AA000024 /* ContextMemory.swift in Sources */,
 				AA000026 /* OutputParserService.swift in Sources */,
 				AA000028 /* LolcatRenderer.swift in Sources */,
+				BB000030 /* SoundElement.swift in Sources */,
+				BB000031 /* NoiseGenerator.swift in Sources */,
+				BB000032 /* AudioMixEngine.swift in Sources */,
+				BB000033 /* MixPreset.swift in Sources */,
+				BB000034 /* PresetStore.swift in Sources */,
+				BB000035 /* SoundMixerView.swift in Sources */,
+				BB000036 /* ElementCard.swift in Sources */,
+				BB000037 /* ScreenshotPreviews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,13 +279,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NeuroShell/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 NeuroShell. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 NeuroShell. All rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.neuroshell.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -271,13 +307,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NeuroShell/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 NeuroShell. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 NeuroShell. All rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.neuroshell.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -337,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -393,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;

@@ -167,7 +167,7 @@ struct TerminalView: View {
                 }
                 .padding(12)
             }
-            .onChange(of: terminalService.outputLines.count) { _, _ in
+            .onChange(of: terminalService.outputLines.count) { _ in
                 if let lastLine = terminalService.outputLines.last {
                     withAnimation(.easeOut(duration: 0.2)) {
                         proxy.scrollTo(lastLine.id, anchor: .bottom)
@@ -315,7 +315,7 @@ struct TerminalView: View {
                 }
             )
             .focused($isInputFocused)
-            .onChange(of: inputText) { _, newValue in
+            .onChange(of: inputText) { newValue in
                 updateSuggestions(for: newValue)
                 if appState.preferences.showCommandExplanations {
                     updateExplanation(for: newValue)
