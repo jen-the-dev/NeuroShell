@@ -205,6 +205,8 @@ class TerminalService: ObservableObject {
     private func runExternalCommandAsRainbow(_ command: String, seed: Double) async {
         isRunning = true
 
+        let workDir = effectiveWorkingDirectory()
+
         let wrappedCommand = """
         export PAGER=cat
         export GIT_PAGER=cat
@@ -223,7 +225,7 @@ class TerminalService: ObservableObject {
 
         process.executableURL = URL(fileURLWithPath: "/bin/zsh")
         process.arguments = ["-c", wrappedCommand]
-        process.currentDirectoryURL = URL(fileURLWithPath: currentDirectory)
+        process.currentDirectoryURL = URL(fileURLWithPath: workDir)
         process.standardOutput = stdoutPipe
         process.standardError = stderrPipe
         process.standardInput = FileHandle.nullDevice
@@ -231,7 +233,7 @@ class TerminalService: ObservableObject {
 
         currentProcess = process
 
-        let timeoutSeconds: Double = 30
+        let timeoutSeconds: Double = 120
         let timeoutTask = Task {
             try await Task.sleep(nanoseconds: UInt64(timeoutSeconds * 1_000_000_000))
             if process.isRunning {
@@ -457,17 +459,17 @@ class TerminalService: ObservableObject {
             return true
 
         case "todo", "tasks":
-            addSystemMessage("📝 Use the Task Chunker in the sidebar → to break down tasks!")
-            addSystemMessage("   Click the brain icon 🧠 in the left sidebar.")
+            addSystemMessage("📝 Use the Task Chunker in the toolbar → to break down tasks!")
+            addSystemMessage("   Click 'Tasks' in the top toolbar.")
             return true
 
         case "timer", "pomodoro":
-            addSystemMessage("⏱️ Use the Timer in the sidebar → for focus sessions!")
-            addSystemMessage("   Click the clock icon ⏱️ in the left sidebar.")
+            addSystemMessage("⏱️ Use the Timer in the toolbar → for focus sessions!")
+            addSystemMessage("   Click 'Timer' in the top toolbar.")
             return true
 
         case "focus":
-            addSystemMessage("🎯 Focus mode tip: Close the sidebar and use the terminal only.")
+            addSystemMessage("🎯 Focus mode tip: Stay on the Terminal tab and tune out distractions.")
             addSystemMessage("   Your brain works better with fewer distractions.")
             addSystemMessage("   Try: Set a 25-minute timer, pick ONE task, and go!")
             return true
@@ -1366,8 +1368,26 @@ class TerminalService: ObservableObject {
     }
 
     // MARK: - External Command Execution
+
+    /// Returns a directory path that exists and is usable as the process cwd.
+    /// If currentDirectory is missing (e.g. was deleted), falls back to home so commands don't fail.
+    private func effectiveWorkingDirectory() -> String {
+        var isDir: ObjCBool = false
+        if FileManager.default.fileExists(atPath: currentDirectory, isDirectory: &isDir), isDir.boolValue {
+            return currentDirectory
+        }
+        let home = FileManager.default.homeDirectoryForCurrentUser.path
+        if currentDirectory != home {
+            addSystemMessage("📂 Working directory no longer exists; using home (~)")
+            currentDirectory = home
+        }
+        return home
+    }
+
     private func runExternalCommand(_ command: String) async {
         isRunning = true
+
+        let workDir = effectiveWorkingDirectory()
 
         // Wrap the command with environment overrides
         let wrappedCommand = """
@@ -1388,7 +1408,7 @@ class TerminalService: ObservableObject {
 
         process.executableURL = URL(fileURLWithPath: "/bin/zsh")
         process.arguments = ["-c", wrappedCommand]
-        process.currentDirectoryURL = URL(fileURLWithPath: currentDirectory)
+        process.currentDirectoryURL = URL(fileURLWithPath: workDir)
         process.standardOutput = stdoutPipe
         process.standardError = stderrPipe
         process.standardInput = FileHandle.nullDevice
@@ -1396,8 +1416,8 @@ class TerminalService: ObservableObject {
 
         currentProcess = process
 
-        // Set a timeout so commands can't hang forever
-        let timeoutSeconds: Double = 30
+        // Set a timeout so commands can't hang forever (2 min allows curl | bash etc.)
+        let timeoutSeconds: Double = 120
         let timeoutTask = Task {
             try await Task.sleep(nanoseconds: UInt64(timeoutSeconds * 1_000_000_000))
             if process.isRunning {
@@ -1496,14 +1516,17 @@ class TerminalService: ObservableObject {
             addErrorMessage("❌ Failed to run command: \(error.localizedDescription)")
 
             // Give specific, helpful advice
+            let errDesc = error.localizedDescription
             let cmdName = command.components(separatedBy: " ").first ?? command
-            if error.localizedDescription.contains("permission") {
-                addSystemMessage("💡 Permission issue. Try: sudo \(command)")
-            } else if error.localizedDescription.contains("No such file") {
-                addSystemMessage("💡 The shell couldn't be found. This is unusual — please report this bug!")
+            if errDesc.lowercased().contains("permission") || errDesc.contains("not permitted") || errDesc.contains("Operation not permitted") {
+                addSystemMessage("💡 This often means the app is sandboxed and can't run external tools.")
+                addSystemMessage("   In Xcode: Target → Signing & Capabilities → disable 'App Sandbox' if you need curl, git, etc.")
+                addSystemMessage("   Or try running the command in the system Terminal to confirm it works.")
+            } else if errDesc.contains("No such file") || errDesc.contains("doesn't exist") {
+                addSystemMessage("💡 The shell or working directory couldn't be used. If this keeps happening, report the bug with the error above.")
             } else {
-                addSystemMessage("💡 '\(cmdName)' might not exist. Try: which \(cmdName)")
-                addSystemMessage("💡 Or install it with: brew install \(cmdName)")
+                addSystemMessage("💡 '\(cmdName)' might not be in PATH. Try: which \(cmdName)")
+                addSystemMessage("   Or install with: brew install \(cmdName)")
             }
         }
 

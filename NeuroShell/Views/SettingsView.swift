@@ -3,6 +3,7 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var lolcat: LolcatRenderer
+    @EnvironmentObject var audioEngine: AudioMixEngine
 
     var body: some View {
         ScrollView {
@@ -214,6 +215,49 @@ struct SettingsView: View {
                     }
                 }
 
+                // Sound Settings
+                settingsSection("Sound", icon: "waveform", color: .teal) {
+                    VStack(alignment: .leading, spacing: 12) {
+                        HStack {
+                            Text("Master Volume")
+                            Spacer()
+                            Slider(value: Binding(
+                                get: { audioEngine.masterVolume },
+                                set: { audioEngine.masterVolume = $0 }
+                            ), in: 0...1, step: 0.05)
+                                .frame(width: 200)
+                            Text("\(Int(audioEngine.masterVolume * 100))%")
+                                .font(.system(size: 12, design: .monospaced))
+                                .frame(width: 35)
+                        }
+
+                        Text("Ambient sounds play procedurally generated nature audio")
+                            .font(.system(size: 11))
+                            .foregroundColor(.secondary)
+
+                        Divider()
+
+                        if audioEngine.isPlaying {
+                            HStack {
+                                Image(systemName: "waveform")
+                                    .foregroundColor(.teal)
+                                Text("\(audioEngine.activeLayers.count) sound(s) playing")
+                                    .font(.system(size: 13))
+                                Spacer()
+                                Button("Stop All") {
+                                    audioEngine.clearAll()
+                                }
+                                .buttonStyle(.bordered)
+                                .controlSize(.small)
+                            }
+                        } else {
+                            Text("No sounds playing")
+                                .font(.system(size: 13))
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                }
+
                 // Accessibility Settings
                 settingsSection("Accessibility", icon: "accessibility", color: .blue) {
                     VStack(alignment: .leading, spacing: 12) {
@@ -243,7 +287,7 @@ struct SettingsView: View {
 
                 // About
                 VStack(spacing: 8) {
-                    Text("NeuroShell v1.0")
+                    Text("NeuroShell v2.0")
                         .font(.system(size: 14, weight: .medium))
                     Text("Made with 💛 for neurodivergent minds")
                         .font(.system(size: 12))
