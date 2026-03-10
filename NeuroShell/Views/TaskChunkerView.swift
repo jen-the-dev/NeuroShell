@@ -61,7 +61,7 @@ struct TaskChunkerView: View {
                             GridItem(.flexible()),
                             GridItem(.flexible())
                         ], spacing: 8) {
-                            templateButton("Deploy a project", icon: "rocket")
+                            templateButton("Deploy a project", icon: "paperplane")
                             templateButton("Set up new project", icon: "plus.rectangle")
                             templateButton("Merge git branches", icon: "arrow.triangle.branch")
                             templateButton("Debug an error", icon: "ladybug")

@@ -3,41 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		AA000001 /* NeuroShellApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000010; };
-		AA000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000011; };
-		AA000003 /* TerminalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000012; };
-		AA000004 /* TaskChunkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000013; };
-		AA000005 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000014; };
-		AA000006 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000015; };
-		AA000007 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000016; };
-		AA000008 /* TerminalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000017; };
-		AA000009 /* CommandSuggestionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000018; };
-		AA00000A /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000019; };
-		AA00000B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA00001A; };
-		AA00000D /* HyperfocusGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001C; };
-		AA00000E /* GentleReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001D; };
-		AA00000F /* BreathingExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001E; };
-		AA000020 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000021; };
-		AA000022 /* QuickActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000023; };
-		AA000024 /* ContextMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000025; };
-		AA000026 /* OutputParserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000027; };
-		AA000028 /* LolcatRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000029; };
-		BB000030 /* SoundElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000040; };
-		BB000031 /* NoiseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000041; };
-		BB000032 /* AudioMixEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000042; };
-		BB000033 /* MixPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000043; };
-		BB000034 /* PresetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000044; };
-		BB000035 /* SoundMixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000045; };
-		BB000036 /* ElementCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000046; };
-		BB000037 /* ScreenshotPreviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000047; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		AA000100 /* NeuroShell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeuroShell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1103047D2F5FFA0D006E30CB /* Neuroshell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neuroshell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA000010 /* NeuroShellApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuroShellApp.swift; sourceTree = "<group>"; };
 		AA000011 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA000012 /* TerminalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalView.swift; sourceTree = "<group>"; };
@@ -52,12 +22,12 @@
 		AA00001C /* HyperfocusGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperfocusGuard.swift; sourceTree = "<group>"; };
 		AA00001D /* GentleReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GentleReminderView.swift; sourceTree = "<group>"; };
 		AA00001E /* BreathingExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingExerciseView.swift; sourceTree = "<group>"; };
+		AA00001F /* NeuroShell.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NeuroShell.entitlements; sourceTree = "<group>"; };
 		AA000021 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		AA000023 /* QuickActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickActionsView.swift; sourceTree = "<group>"; };
 		AA000025 /* ContextMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMemory.swift; sourceTree = "<group>"; };
 		AA000027 /* OutputParserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputParserService.swift; sourceTree = "<group>"; };
 		AA000029 /* LolcatRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolcatRenderer.swift; sourceTree = "<group>"; };
-		AA00001F /* NeuroShell.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NeuroShell.entitlements; sourceTree = "<group>"; };
 		AA000099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB000040 /* SoundElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundElement.swift; sourceTree = "<group>"; };
 		BB000041 /* NoiseGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseGenerator.swift; sourceTree = "<group>"; };
@@ -69,8 +39,12 @@
 		BB000047 /* ScreenshotPreviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotPreviews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1103047E2F5FFA0D006E30CB /* Neuroshell */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Neuroshell; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
-		AA000200 /* Frameworks */ = {
+		1103047A2F5FFA0D006E30CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -84,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				AA000301 /* NeuroShell */,
+				1103047E2F5FFA0D006E30CB /* Neuroshell */,
 				AA000302 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,7 +83,7 @@
 		AA000302 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA000100 /* NeuroShell.app */,
+				1103047D2F5FFA0D006E30CB /* Neuroshell.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,18 +103,6 @@
 				BB000047 /* ScreenshotPreviews.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		BB000306 /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-				BB000040 /* SoundElement.swift */,
-				BB000041 /* NoiseGenerator.swift */,
-				BB000042 /* AudioMixEngine.swift */,
-				BB000043 /* MixPreset.swift */,
-				BB000044 /* PresetStore.swift */,
-			);
-			path = Audio;
 			sourceTree = "<group>";
 		};
 		AA000304 /* Models */ = {
@@ -164,24 +127,41 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		BB000306 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				BB000040 /* SoundElement.swift */,
+				BB000041 /* NoiseGenerator.swift */,
+				BB000042 /* AudioMixEngine.swift */,
+				BB000043 /* MixPreset.swift */,
+				BB000044 /* PresetStore.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AA000400 /* NeuroShell */ = {
+		1103047C2F5FFA0D006E30CB /* Neuroshell */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA000600;
+			buildConfigurationList = 110304852F5FFA10006E30CB /* Build configuration list for PBXNativeTarget "Neuroshell" */;
 			buildPhases = (
-				AA000500 /* Sources */,
-				AA000200 /* Frameworks */,
-				AA000501 /* Resources */,
+				110304792F5FFA0D006E30CB /* Sources */,
+				1103047A2F5FFA0D006E30CB /* Frameworks */,
+				1103047B2F5FFA0D006E30CB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = NeuroShell;
-			productName = NeuroShell;
-			productReference = AA000100;
+			fileSystemSynchronizedGroups = (
+				1103047E2F5FFA0D006E30CB /* Neuroshell */,
+			);
+			name = Neuroshell;
+			packageProductDependencies = (
+			);
+			productName = Neuroshell;
+			productReference = 1103047D2F5FFA0D006E30CB /* Neuroshell.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -191,15 +171,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
-					AA000400 = {
-						CreatedOnToolsVersion = 15.0;
+					1103047C2F5FFA0D006E30CB = {
+						CreatedOnToolsVersion = 26.2;
 					};
 				};
 			};
-			buildConfigurationList = AA000800;
+			buildConfigurationList = AA000800 /* Build configuration list for PBXProject "NeuroShell" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -208,115 +188,100 @@
 				Base,
 			);
 			mainGroup = AA000300;
-			productRefGroup = AA000302;
+			productRefGroup = AA000302 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AA000400 /* NeuroShell */,
+				1103047C2F5FFA0D006E30CB /* Neuroshell */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AA000501 /* Resources */ = {
+		1103047B2F5FFA0D006E30CB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA00000B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AA000500 /* Sources */ = {
+		110304792F5FFA0D006E30CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA000001 /* NeuroShellApp.swift in Sources */,
-				AA000002 /* ContentView.swift in Sources */,
-				AA000003 /* TerminalView.swift in Sources */,
-				AA000004 /* TaskChunkerView.swift in Sources */,
-				AA000005 /* TimerView.swift in Sources */,
-				AA000006 /* SettingsView.swift in Sources */,
-				AA000007 /* TaskModel.swift in Sources */,
-				AA000008 /* TerminalService.swift in Sources */,
-				AA000009 /* CommandSuggestionEngine.swift in Sources */,
-				AA00000A /* TimerService.swift in Sources */,
-				AA00000D /* HyperfocusGuard.swift in Sources */,
-				AA00000E /* GentleReminderView.swift in Sources */,
-				AA00000F /* BreathingExerciseView.swift in Sources */,
-				AA000020 /* AppState.swift in Sources */,
-				AA000022 /* QuickActionsView.swift in Sources */,
-				AA000024 /* ContextMemory.swift in Sources */,
-				AA000026 /* OutputParserService.swift in Sources */,
-				AA000028 /* LolcatRenderer.swift in Sources */,
-				BB000030 /* SoundElement.swift in Sources */,
-				BB000031 /* NoiseGenerator.swift in Sources */,
-				BB000032 /* AudioMixEngine.swift in Sources */,
-				BB000033 /* MixPreset.swift in Sources */,
-				BB000034 /* PresetStore.swift in Sources */,
-				BB000035 /* SoundMixerView.swift in Sources */,
-				BB000036 /* ElementCard.swift in Sources */,
-				BB000037 /* ScreenshotPreviews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		AA000601 /* Debug */ = {
+		110304862F5FFA10006E30CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = NeuroShell/NeuroShell.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 5P3F6DNZXR;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NeuroShell/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 NeuroShell. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.neuroshell.app;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ArcaneGlam.Neuroshell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		AA000602 /* Release */ = {
+		110304872F5FFA10006E30CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = NeuroShell/NeuroShell.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 5P3F6DNZXR;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NeuroShell/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 NeuroShell. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.neuroshell.app;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ArcaneGlam.Neuroshell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -355,7 +320,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 5P3F6DNZXR;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -378,6 +345,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -417,7 +385,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 5P3F6DNZXR;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -433,6 +403,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -440,11 +411,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA000600 /* Build configuration list for PBXNativeTarget "NeuroShell" */ = {
+		110304852F5FFA10006E30CB /* Build configuration list for PBXNativeTarget "Neuroshell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA000601 /* Debug */,
-				AA000602 /* Release */,
+				110304862F5FFA10006E30CB /* Debug */,
+				110304872F5FFA10006E30CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

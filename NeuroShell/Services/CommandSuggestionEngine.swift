@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 // MARK: - Command Suggestion Engine
 /// Provides context-aware command suggestions and breaks complex commands into steps
