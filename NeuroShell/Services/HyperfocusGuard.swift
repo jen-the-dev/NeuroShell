@@ -141,7 +141,9 @@ class HyperfocusGuard: ObservableObject {
             }
         } else {
             hyperfocusLevel = .warning
-            showGentleWarning("⚠️ \(minutesActive) minutes of continuous work! Your brain needs a break to process everything. Even 5 minutes helps!")
+            if !showWarning {
+                showGentleWarning("⚠️ \(minutesActive) minutes of continuous work! Your brain needs a break to process everything. Even 5 minutes helps!")
+            }
         }
         
         isHyperfocusDetected = hyperfocusLevel == .high || hyperfocusLevel == .warning

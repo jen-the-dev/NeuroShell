@@ -24,7 +24,7 @@ class TerminalService: ObservableObject {
 
     init() {
         setupDefaultAliases()
-        addSystemMessage("🧠 Welcome to NeuroShell — your neurodivergent-friendly terminal")
+        addSystemMessage("🧠 Welcome to NeuroShell v3 — your neurodivergent-friendly terminal")
         addSystemMessage("💡 Type 'help' for commands, '?' for quick reference, or just start typing")
         addSystemMessage("🎯 Tip: Describe what you want in plain English and I'll help break it down")
         addSystemMessage("📖 Type 'man <command>' to learn about any command in plain language")
