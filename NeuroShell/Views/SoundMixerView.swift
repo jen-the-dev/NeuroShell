@@ -9,6 +9,7 @@ struct SoundMixerView: View {
     @State private var showSaveSheet: Bool = false
     @State private var newPresetName: String = ""
     @State private var showMaxLayerAlert: Bool = false
+    @State private var waveHeights: [CGFloat] = [8, 12, 6]
 
     private let columns = [
         GridItem(.flexible(), spacing: 12),
@@ -248,10 +249,22 @@ struct SoundMixerView: View {
                         ForEach(0..<3, id: \.self) { i in
                             RoundedRectangle(cornerRadius: 1)
                                 .fill(Color.teal)
-                                .frame(width: 3, height: CGFloat.random(in: 6...14))
+                                .frame(width: 3, height: waveHeights[i])
+                                .animation(
+                                    .easeInOut(duration: Double.random(in: 0.3...0.6))
+                                    .repeatForever(autoreverses: true)
+                                    .delay(Double(i) * 0.1),
+                                    value: waveHeights[i]
+                                )
                         }
                     }
                     .frame(height: 14)
+                    .onAppear {
+                        animateWave()
+                    }
+                    .onChange(of: audioEngine.isPlaying) { playing in
+                        if playing { animateWave() }
+                    }
                 }
 
                 Spacer()
@@ -342,5 +355,12 @@ struct SoundMixerView: View {
         }
         .padding(24)
         .frame(minWidth: 320)
+    }
+
+    // MARK: - Wave Animation
+    private func animateWave() {
+        withAnimation(.easeInOut(duration: 0.4).repeatForever(autoreverses: true)) {
+            waveHeights = [CGFloat.random(in: 6...14), CGFloat.random(in: 8...14), CGFloat.random(in: 6...12)]
+        }
     }
 }

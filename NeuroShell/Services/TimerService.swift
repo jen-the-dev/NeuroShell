@@ -1,3 +1,4 @@
+import Combine
 import Foundation
 import SwiftUI
 import UserNotifications
@@ -60,7 +61,7 @@ class TimerService: ObservableObject {
         sessionStartTime = Date()
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
-            Task { @MainActor in
+            Task { @MainActor [weak self] in
                 self?.tick()
             }
         }
@@ -129,7 +130,7 @@ class TimerService: ObservableObject {
         
         breakTimer?.invalidate()
         breakTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-            Task { @MainActor in
+            Task { @MainActor [weak self] in
                 self?.breakTick()
             }
         }

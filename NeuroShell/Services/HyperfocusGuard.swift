@@ -1,3 +1,4 @@
+import Combine
 import Foundation
 import SwiftUI
 
@@ -63,7 +64,7 @@ class HyperfocusGuard: ObservableObject {
     func startMonitoring() {
         sessionStartTime = Date()
         monitorTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
-            Task { @MainActor in
+            Task { @MainActor [weak self] in
                 self?.evaluateHyperfocusLevel()
             }
         }
@@ -140,7 +141,9 @@ class HyperfocusGuard: ObservableObject {
             }
         } else {
             hyperfocusLevel = .warning
-            showGentleWarning("⚠️ \(minutesActive) minutes of continuous work! Your brain needs a break to process everything. Even 5 minutes helps!")
+            if !showWarning {
+                showGentleWarning("⚠️ \(minutesActive) minutes of continuous work! Your brain needs a break to process everything. Even 5 minutes helps!")
+            }
         }
         
         isHyperfocusDetected = hyperfocusLevel == .high || hyperfocusLevel == .warning

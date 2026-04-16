@@ -11,7 +11,18 @@ struct ElementCard: View {
     let onToggle: () -> Void
     let onVolumeChange: (Float) -> Void
 
-    @State private var localVolume: Float = 0.6
+    @State private var localVolume: Float
+
+    init(element: SoundElement, isActive: Bool, isDisabled: Bool, volume: Float,
+         onToggle: @escaping () -> Void, onVolumeChange: @escaping (Float) -> Void) {
+        self.element = element
+        self.isActive = isActive
+        self.isDisabled = isDisabled
+        self.volume = volume
+        self.onToggle = onToggle
+        self.onVolumeChange = onVolumeChange
+        _localVolume = State(initialValue: volume > 0 ? volume : 0.6)
+    }
 
     var body: some View {
         VStack(spacing: 10) {
