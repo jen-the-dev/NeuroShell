@@ -11,6 +11,12 @@
 
 An AI-powered terminal assistant designed for ADHD/AuDHD users struggling with executive dysfunction. It breaks complex commands into simple steps, provides gentle reminders, reduces decision paralysis with smart suggestions, and offers distraction-free workflows.
 
+
+## ANZSCO 261312 Skills Snapshot
+- Native application design and implementation using Swift/SwiftUI.
+- User-centered software development for practical productivity outcomes.
+- Maintainable project structuring and documentation for engineering handover.
+
 ## ✨ Features
 
 - 🧩 **Task Chunking** — Break big scary commands into small friendly steps
