@@ -67,3 +67,53 @@ MIT — use it, fork it, make it yours.
   <b>Made with 💛 for neurodivergent minds</b><br/>
   Your brain isn't broken — it's just wired differently.
 </p>
+
+
+## Problem
+Traditional terminal workflows can create cognitive overload for neurodivergent developers, especially during multi-step troubleshooting.
+
+## Solution
+A SwiftUI-based assistant that breaks command work into structured steps, supports context recovery, and encourages sustainable workflow pacing.
+
+## Architecture Diagram
+```mermaid
+flowchart LR
+  User["Developer"] --> UI["SwiftUI App"]
+  UI --> Assist["Task Guidance Layer"]
+  Assist --> Context["Session Context + Recovery"]
+  Assist --> Wellness["Focus/Break Prompts"]
+```
+
+## Tech Stack
+- Swift
+- SwiftUI
+- macOS app architecture
+- Xcode tooling
+
+## Setup Instructions
+```bash
+git clone https://github.com/jen-the-dev/NeuroShell.git
+cd NeuroShell
+open NeuroShell.xcodeproj
+```
+
+## Testing
+- Build and run from Xcode (⌘R)
+- Optional CI/local build check: xcodebuild -scheme NeuroShell -configuration Debug build
+
+## ANZSCO 261312 Competency Evidence
+- Application design and implementation with native macOS technologies.
+- User-experience driven software development for operational reliability.
+- Maintainable project structuring and technical documentation.
+
+## Commit Convention
+Use Conventional Commits for presentation clarity:
+- `feat(scope): add new user-facing capability`
+- `fix(scope): resolve functional defect`
+- `test(scope): add or improve automated tests`
+- `docs(readme): improve project documentation`
+
+## Evidence Map
+- `NeuroShell/`
+- `NeuroShell.xcodeproj`
+- `PROJECT_OVERVIEW.md`
