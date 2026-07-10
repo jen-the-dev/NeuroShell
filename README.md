@@ -1,8 +1,8 @@
-# 🧠 NeuroShell
+# NeuroShell
 
-**A kinder terminal for differently wired minds.**
+macOS SwiftUI terminal assistant with structured task guidance, session context recovery, and focus-oriented workflow pacing.
 
-> Built for the brains that alt-tab mid-thought.
+**Tech spec:** [docs/TECH_SPEC.md](docs/TECH_SPEC.md)
 
 [![Platform](https://img.shields.io/badge/platform-macOS%2014%2B-blue)]()
 [![Swift](https://img.shields.io/badge/Swift-5.0-orange)]()
@@ -36,14 +36,14 @@ An AI-powered terminal assistant designed for ADHD/AuDHD users struggling with e
 
 ### Build & Run
 ```
-git clone https://github.com/YOUR_USERNAME/neuroshell.git
-cd neuroshell
+git clone https://github.com/jv-darkheartlabs/NeuroShell.git
+cd NeuroShell
 open NeuroShell.xcodeproj
 ```
 Press **⌘R** in Xcode to build and run.
 
 ### Download
-Check [Releases](https://github.com/YOUR_USERNAME/neuroshell/releases) for pre-built `.app` binaries.
+Check [Releases](https://github.com/jv-darkheartlabs/NeuroShell/releases) for pre-built `.app` binaries.
 
 ## 📖 Documentation
 
@@ -98,7 +98,7 @@ flowchart LR
 
 ## Setup Instructions
 ```bash
-git clone https://github.com/jen-the-dev/NeuroShell.git
+git clone https://github.com/jv-darkheartlabs/NeuroShell.git
 cd NeuroShell
 open NeuroShell.xcodeproj
 ```
@@ -123,3 +123,10 @@ Use Conventional Commits for presentation clarity:
 - `NeuroShell/`
 - `NeuroShell.xcodeproj`
 - `PROJECT_OVERVIEW.md`
+- `docs/TECH_SPEC.md`
+
+---
+
+**Maintained by:** [Dark Heart Labs](https://darkheartlabs.technology)  
+**Author:** Jennifer ([@jv-darkheartlabs](https://github.com/jv-darkheartlabs))  
+**Site:** https://darkheartlabs.technology
