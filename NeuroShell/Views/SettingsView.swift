@@ -287,7 +287,7 @@ struct SettingsView: View {
 
                 // About
                 VStack(spacing: 8) {
-                    Text("NeuroShell v2.0")
+                    Text("NeuroShell v3.0")
                         .font(.system(size: 14, weight: .medium))
                     Text("Made with 💛 for neurodivergent minds")
                         .font(.system(size: 12))

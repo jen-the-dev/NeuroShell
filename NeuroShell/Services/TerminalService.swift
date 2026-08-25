@@ -2020,7 +2020,7 @@ class TerminalService: ObservableObject {
 
     private func showVersion() {
         addSystemMessage("")
-        addSystemMessage("🧠 NeuroShell v1.0.0")
+        addSystemMessage("🧠 NeuroShell v3.0.0")
         addSystemMessage("   The terminal that gets your brain")
         addSystemMessage("")
         addSystemMessage("   Built with 💛 for ADHD & AuDHD minds")
