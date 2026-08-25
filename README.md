@@ -43,7 +43,7 @@ open NeuroShell.xcodeproj
 Press **⌘R** in Xcode to build and run.
 
 ### Download
-Check [Releases](https://github.com/jv-darkheartlabs/NeuroShell/releases) for pre-built `.app` binaries.
+Check [Releases](https://github.com/jv-darkheartlabs/NeuroShell/releases) for pre-built `.app` binaries. Tag `v*` (e.g. `v0.1.0`) triggers GitHub Actions to build and attach `NeuroShell-macOS.zip`.
 
 ## 📖 Documentation
 
